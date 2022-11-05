@@ -9,6 +9,7 @@ for num in range(2*(num1)-1):
     #checks if number has gone to negative or not
     if s != abs(s):
         n = abs(s)
+        
         f = '-'*n
         
         if num == 0:
@@ -16,27 +17,40 @@ for num in range(2*(num1)-1):
             printable = f + o+f
             print(printable)
             mid_col = s-1
-        elif num%2 ==0:
-            pass
         elif num ==  num1-2:
             wel ='WELCOME'
             lum = (num2-7)//2
             printable = lum*'-' +wel+lum*'-'
+            print(printable)
         
         else:
-            mul = num-2
-            o = '.|.'*mul
-            printable = f + o+f
-            print(printable)
-            mid_col = s-1
+            mul = num-n+2
+            mid_col=s-1
+            s = mid_col+1
+            n = abs(s)
+            f = '-'*n
+        
+            if mul%2!=0 and mul==abs(mul):
+                s = mid_col+1
+                n = abs(s)
+                f = '-'*n
+                o = '.|.'*mul
+                printable = f + o+f
+                print(printable)
+                
+            
+            else:
+                pass
     #checks if number has gone to negative or not
     elif s ==  abs(s):
-        if s == 0:
                
         f = '-'*s
         #checks if the index is 0 or not # only used to fix error, SORRY!
-        
-        if num == 0:
+        if s == 0:
+            mid_col=s-1
+            pass
+         
+        elif num == 0:
             o= '.|.'
             printable = f + o+f
             print(printable)
